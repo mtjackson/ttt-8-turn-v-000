@@ -38,23 +38,14 @@ def valid_move?(board, index)
   end
 end
 
-def approved_position(board, index)
-  if position_taken?(board, index).to_s == 'true'
-    true
-  elsif position_taken?(board, index).to_s == 'false'
-    false
-  end
-end
+
 
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if index.between?(0, 8) == true
-    if approved_postion(board, index) == false
-      display_board(board)
-    elsif approved_postion(board, index) == true
-      turn(board)
+
   else
     turn(board)
   end
