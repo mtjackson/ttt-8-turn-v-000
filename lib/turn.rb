@@ -43,7 +43,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if index.between?(0, 8) == true
-    if position_taken(board, index) == false
+    if position_taken?(board, index) == false
       display_board(board)
     elsif valid_move?(board, index) == true
       turn(board)
