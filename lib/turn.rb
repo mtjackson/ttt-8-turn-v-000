@@ -45,7 +45,7 @@ def turn(board)
   if index.between?(0, 8) == true
     if position_taken(board, index) == false
       display_board(board)
-    elsif valid_move(board, index) == true
+    elsif valid_move?(board, index) == true
       turn(board)
   else
     turn(board)
